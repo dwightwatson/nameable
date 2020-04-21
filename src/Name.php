@@ -62,7 +62,7 @@ class Name
      */
     public function full(): string
     {
-        return $this->full ??= collect([$this->firstName, $this->lastName])
+        return collect([$this->firstName, $this->lastName])
             ->filter()
             ->join(' ');
     }
