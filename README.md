@@ -56,12 +56,18 @@ $user->name->initials    // DCW
 In addition there are possessive variants you can use which will work correctly with names that end in `s`.
 
 ```php
-$user->name->full_possessive  // Dwight Conrad Watson's
-$user->name->first_possessive // Dwight's
-$user->name->last_possessive  // Watson's
-$user->name->sorted_possessive  // Watson, Dwight's
-$user->name->initials_possessive  // DCW's
-$user->name->abbreviated_possessive  // D. Watson's
+$user = new User(['name' => 'Dwight Conrad watson']);
+
+$user->name->full_possessive        // Dwight Conrad Watson's
+$user->name->first_possessive       // Dwight's
+$user->name->last_possessive        // Watson's
+$user->name->abbreviated_possessive // D. Watson's
+$user->name->sorted_possessive      // Watson, Dwight's
+$user->name->initials_possessive    // DCW's
+
+$user = new User(['name' => 'Angus Young']);
+$user->name->full_possessive        // Angus Young's
+$user->name->first_possessive       // Angus'
 ```
 
 If a user doesn't provide a full name (for example, just a first name) the attributes will just omit the last name.
