@@ -1,0 +1,44 @@
+{
+    "name": "watson/nameable",
+    "description": "Format names of users into full, familiar and abbreviated forms",
+    "keywords": [
+        "laravel",
+        "caster",
+        "names"
+    ],
+    "homepage": "https://github.com/dwightwatson/nameable",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Dwight Watson",
+            "email": "dwight@studiousapp.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5",
+        "illuminate/contracts": "^7.0",
+        "illuminate/support": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Watson\\Nameable\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Watson\\Nameable\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
