@@ -42,28 +42,28 @@ $name = Name::from('Dwight Conrad Watson');
 ## Usage
 
 ```php
-$user = new User(['name' => 'Dwight Conrad Watson']);
+$user = new User(['name' => 'Dwight Watson']);
 
-$user->name->full        // Dwight Conrad Watson
+$user->name->full        // Dwight Watson
 $user->name->first       // Dwight
 $user->name->last        // Watson
 $user->name->familiar    // Dwight W. 
 $user->name->abbreviated // D. Watson
 $user->name->sorted      // Watson, Dwight
-$user->name->initials    // DCW
+$user->name->initials    // DW
 ```
 
 In addition there are possessive variants you can use which will work correctly with names that end in `s`.
 
 ```php
-$user = new User(['name' => 'Dwight Conrad Watson']);
+$user = new User(['name' => 'Dwight Watson']);
 
-$user->name->full_possessive        // Dwight Conrad Watson's
+$user->name->full_possessive        // Dwight Watson's
 $user->name->first_possessive       // Dwight's
 $user->name->last_possessive        // Watson's
 $user->name->abbreviated_possessive // D. Watson's
 $user->name->sorted_possessive      // Watson, Dwight's
-$user->name->initials_possessive    // DCW's
+$user->name->initials_possessive    // DW's
 
 $user = new User(['name' => 'Angus Young']);
 $user->name->full_possessive        // Angus Young's
