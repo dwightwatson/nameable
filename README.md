@@ -42,7 +42,7 @@ $name = Name::from('Dwight Conrad Watson');
 ## Usage
 
 ```php
-$user = new User(['name' => 'Dwight Conrad watson']);
+$user = new User(['name' => 'Dwight Conrad Watson']);
 
 $user->name->full        // Dwight Conrad Watson
 $user->name->first       // Dwight
@@ -56,7 +56,7 @@ $user->name->initials    // DCW
 In addition there are possessive variants you can use which will work correctly with names that end in `s`.
 
 ```php
-$user = new User(['name' => 'Dwight Conrad watson']);
+$user = new User(['name' => 'Dwight Conrad Watson']);
 
 $user->name->full_possessive        // Dwight Conrad Watson's
 $user->name->first_possessive       // Dwight's
