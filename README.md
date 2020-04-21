@@ -1,7 +1,7 @@
 # nameable
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/watson/nameable.svg?style=flat-square)](https://packagist.org/packages/watson/nameable)
-[![Build Status](https://img.shields.io/travis/watson/nameable/master.svg?style=flat-square)](https://travis-ci.org/watson/nameable)
+[![Build Status](https://img.shields.io/travis/dwightwatson/nameable/master.svg?style=flat-square)](https://travis-ci.org/dwightwatson/nameable)
 [![Total Downloads](https://img.shields.io/packagist/dt/watson/nameable.svg?style=flat-square)](https://packagist.org/packages/watson/nameable)
 
 This package provides a caster and a formatter class for presenting your user's names. It can get a user's first, last or full name, their initials, and common abbreviations. Instead of separating the fields over a few database columns you can store a user's name in a single column and fetch what you need.
