@@ -11,12 +11,12 @@ class Name
     /**
      * The raw first name.
      */
-    protected string $firstName;
+    protected $firstName;
 
     /**
      * The raw last name attribute.
      */
-    protected ?string $lastName;
+    protected $lastName;
 
     /**
      * Create a new name instance.
