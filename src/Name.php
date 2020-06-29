@@ -4,8 +4,8 @@ namespace Watson\Nameable;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Stringable;
-use Watson\Nameable\Str;
 use JsonSerializable;
+use Watson\Nameable\Str;
 
 class Name implements JsonSerializable
 {
@@ -142,6 +142,14 @@ class Name implements JsonSerializable
     }
 
     /**
+     * Get the JSON representation of the name.
+     */
+    public function jsonSerialize(): string
+    {
+        return $this->full();
+    }
+
+    /**
      * Determine if the user wants a possessive variant.
      */
     protected function wantsPossessive($key): bool
@@ -156,10 +164,4 @@ class Name implements JsonSerializable
     {
         return sprintf("%s'%s", $string, (Str::endsWith($string, 's') ? null : 's'));
     }
-    
-    public function jsonSerialize(): string
-    {
-        return $this->full();
-    }
-
 }
