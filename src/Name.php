@@ -5,8 +5,9 @@ namespace Watson\Nameable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Stringable;
 use Watson\Nameable\Str;
+use JsonSerializable;
 
-class Name
+class Name implements JsonSerializable
 {
     /**
      * The raw first name.
@@ -154,6 +155,11 @@ class Name
     protected function possessive(string $string): string
     {
         return sprintf("%s'%s", $string, (Str::endsWith($string, 's') ? null : 's'));
+    }
+    
+    public function jsonSerialize(): string
+    {
+        return $this->full();
     }
 
 }
