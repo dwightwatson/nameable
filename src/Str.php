@@ -18,7 +18,7 @@ class Str extends BaseStr
     /**
      * Remove all additional spaces from a string.
      */
-    public static function squish(string $string): string
+    public static function squish($string): string
     {
         return (new Stringable($string))
             ->replaceMatches('/[[:space:]]+/', ' ')
