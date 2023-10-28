@@ -12,7 +12,7 @@ class Str extends BaseStr
      */
     public static function firstLetter(string $value): string
     {
-        return substr($value, 0, 1);
+        return BaseStr::substr($value, 0, 1);
     }
 
     /**
