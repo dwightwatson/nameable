@@ -7,8 +7,7 @@ use Watson\Nameable\Nameable;
 
 class NameableTest extends TestCase
 {
-    /** @test */
-    public function it_gets_name_instance()
+    public function test_it_gets_name_instance()
     {
         $result = (new Nameable)->get(null, null, 'Dwight Conrad Watson', null);
 
@@ -17,8 +16,7 @@ class NameableTest extends TestCase
         $this->assertEquals('Dwight Conrad Watson', (string) $result);
     }
 
-    /** @test */
-    public function it_casts_name_instance_back_to_string()
+    public function test_it_casts_name_instance_back_to_string()
     {
         $name = Name::from('Dwight Conrad Watson');
 
