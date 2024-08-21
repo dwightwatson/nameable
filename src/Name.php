@@ -5,7 +5,6 @@ namespace Watson\Nameable;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Stringable;
 use JsonSerializable;
-use Watson\Nameable\Str;
 
 class Name implements JsonSerializable
 {
@@ -74,7 +73,7 @@ class Name implements JsonSerializable
     public function familiar(): string
     {
         if ($this->lastName) {
-            return sprintf("%s %s.", $this->firstName, Str::firstLetter($this->lastName));
+            return sprintf('%s %s.', $this->firstName, Str::firstLetter($this->lastName));
         }
 
         return $this->firstName;
@@ -86,7 +85,7 @@ class Name implements JsonSerializable
     public function abbreviated(): string
     {
         if ($this->lastName) {
-            return sprintf("%s. %s", Str::firstLetter($this->firstName), $this->lastName);
+            return sprintf('%s. %s', Str::firstLetter($this->firstName), $this->lastName);
         }
 
         return $this->firstName;
@@ -98,7 +97,7 @@ class Name implements JsonSerializable
     public function sorted(): string
     {
         if ($this->lastName) {
-            return sprintf("%s, %s", $this->lastName, $this->firstName);
+            return sprintf('%s, %s', $this->lastName, $this->firstName);
         }
 
         return $this->firstName;

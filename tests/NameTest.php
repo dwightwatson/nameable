@@ -2,7 +2,6 @@
 
 namespace Watson\Nameable\Tests;
 
-use ArgumentCountError;
 use Watson\Nameable\Name;
 
 class NameTest extends TestCase
@@ -66,13 +65,15 @@ class NameTest extends TestCase
         $this->assertEquals('Dwight', $this->first->familiar);
     }
 
-    public function test_it_gets_abbreviated() {
+    public function test_it_gets_abbreviated()
+    {
         $this->assertEquals('D. Watson', $this->name->abbreviated);
 
         $this->assertEquals('Dwight', $this->first->abbreviated);
     }
 
-    public function test_it_gets_sorted() {
+    public function test_it_gets_sorted()
+    {
         $this->assertEquals('Watson, Dwight', $this->name->sorted);
 
         $this->assertEquals('Dwight', $this->first->sorted);
